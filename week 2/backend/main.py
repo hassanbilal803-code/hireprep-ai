@@ -11,6 +11,19 @@ import subprocess
 import shutil
 import re
 from pypdf import PdfReader
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware # Add this line
+
+app = FastAPI()
+
+# Add this block right here, before your other code/routes
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # This tells the backend to accept requests from anywhere
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
