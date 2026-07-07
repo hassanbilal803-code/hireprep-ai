@@ -12,7 +12,7 @@ import shutil
 import re
 from pypdf import PdfReader
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware # 
+from fastapi.middleware.cors import CORSMiddleware 
 
 app = FastAPI()
 
