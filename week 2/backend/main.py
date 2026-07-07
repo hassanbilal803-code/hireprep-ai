@@ -190,7 +190,7 @@ async def compile_pdf(request: LatexRequest, background_tasks: BackgroundTasks):
 
         for _ in range(2):
             process = subprocess.run(
-                ["pdflatex.exe", "-interaction=nonstopmode", "-output-directory", tmpdir, tex_file_path],
+                ["pdflatex", "-interaction=nonstopmode", "-output-directory", tmpdir, tex_file_path],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 text=True,
