@@ -228,7 +228,7 @@ Return ONLY a valid JSON object matching this structure:
 }}
 """
         completion = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-8b-8192",
             messages=[
                 {"role": "system", "content": "You are a JSON compliance utility."},
                 {"role": "user", "content": prompt}
