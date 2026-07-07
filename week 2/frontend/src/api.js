@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000';
+// Remove the localhost URL and paste your Render URL. 
+// Make sure there is NO slash at the very end of the URL.
+const API_URL = 'https://hireprep-ai-backend.onrender.com';
 
 export const processWorkflow = async (formData) => {
     const response = await axios.post(`${API_URL}/process-workflow`, formData, {
